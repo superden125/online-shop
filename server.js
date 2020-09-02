@@ -69,7 +69,7 @@ app.use(passport.session());
 //   next();
 // });
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use("/public", express.static(path.join(__dirname, "/public")));
 
 //app.use("/", pageRouter);
 app.use("/user", usersRouter);

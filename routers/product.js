@@ -6,9 +6,6 @@ const auth = require("../config/passport");
 const paginationPage = require("../config/paginationPage");
 const { paginationPa } = require("../config/pagination");
 
-const isUser = auth.isUser;
-const pagination = paginationPage.pagination;
-
 //get all product
 // router.get("/", pagination(Product), (req, res) => {
 //   res.json(res.pagination);
