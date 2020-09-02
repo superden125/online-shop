@@ -1,4 +1,5 @@
-const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
+const REACT_APP_API_URL =
+  process.env.REACT_APP_API_URL_HEROKU || process.env.REACT_APP_API_URL;
 
 const formatMoney = (num) => {
   var num = parseInt(num);
