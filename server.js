@@ -17,6 +17,7 @@ const order = require("./routers/order");
 // const cart = require("./routes/cart");
 
 var app = express();
+const PORT = process.env.PORT || 3080;
 
 require("dotenv/config");
 
@@ -80,7 +81,7 @@ app.use("/order", order);
 // app.use("/cart", cart);
 
 mongoose.connect(
-  process.env.DB_CONNECTION,
+  process.env.MONGODB_URI || process.env.DB_CONNECTION,
   {
     useUnifiedTopology: true,
     useNewUrlParser: true,
@@ -91,6 +92,13 @@ mongoose.connect(
   }
 );
 
-app.listen(3080, () => {
-  console.log("Listening on port 3080...");
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+}
+
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}...`);
 });
