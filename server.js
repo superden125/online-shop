@@ -71,7 +71,7 @@ app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", pageRouter);
+//app.use("/", pageRouter);
 app.use("/user", usersRouter);
 // app.use("/admin/page", adminPageRouter);
 app.use("/admin/category", adminCategoryRouter);

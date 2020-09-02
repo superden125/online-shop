@@ -52,25 +52,25 @@ router.post("/signup", async (req, res) => {
     }
   }
 });
-router.get("/createadmin", async (req, res) => {
-  try {
-    const salt = await bcrypt.genSalt(10);
-    const hashPassword = await bcrypt.hash("sd", salt);
-    const user = new User({
-      name: "sd",
-      email: "sd@gmail",
-      username: "sd",
-      password: hashPassword,
-      isAdmin: true,
-    });
+// router.get("/createadmin", async (req, res) => {
+//   try {
+//     const salt = await bcrypt.genSalt(10);
+//     const hashPassword = await bcrypt.hash("sd", salt);
+//     const user = new User({
+//       name: "sd",
+//       email: "sd@gmail",
+//       username: "sd",
+//       password: hashPassword,
+//       isAdmin: true,
+//     });
 
-    const newUser = await user.save();
-    res.send(user);
-  } catch (error) {
-    console.log(error);
-    res.send(error.message);
-  }
-});
+//     const newUser = await user.save();
+//     res.send(user);
+//   } catch (error) {
+//     console.log(error);
+//     res.send(error.message);
+//   }
+// });
 
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
