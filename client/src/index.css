@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.navbar {
+  /* background-color: rgba(112, 4, 4, 0.781) !important; */
+  padding-left: 30px !important;
+}
+
+.navbar-nav a {
+  /* color: #ffffff !important; */
+  font-size: 20px;
+}
+.nav-link {
+  padding-left: 30px;
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-menu {
+  background-color: rgba(112, 4, 4, 0.781) !important;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(112, 4, 4, 0.582);
+}
+
+.content-center {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  border: 3px solid #0000;
+}
+
+/*home page*/
+
+#home {
+  background: url("assess/images/background.jpg") no-repeat center fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.text-intro {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.image-intro {
+  flex: 1;
+}
+
+.image-intro img {
+  max-width: 720px;
+  max-height: 720px;
+}
+
+.landing-text {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.landing-text h1 {
+  font-size: 400%;
+  font-weight: 700;
+}
+
+.logo {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.fa {
+  padding: 15px 10px;
+}
+
+.footer {
+  background: url("assess/images/background.jpg") no-repeat center fixed;
+  display: flex;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 0 150px 0;
+}
+
+.footer-address ul {
+  text-align: left;
+}
+
+.footer-connect ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.padding {
+  padding: 80px 0;
+}
+
+.card-product {
+  background-color: #f0f0f0;
+  padding: 50px;
+}
+
+#fixed {
+  background: url("assess/images/background.jpg") no-repeat center fixed;
+  /* background-color: rgb(235, 231, 20); */
+  display: flex;
+  height: 30vh;
+  width: 100%;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.myCarousel {
+  padding: 30px;
+}
+
+.myCarousel button {
+  padding: 20px;
+  margin: 0 auto 15px auto;
+}
+
+/*form*/
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form button:focus {
+  outline: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 30px;
+  border: 2px #f0f0f0 solid;
+  border-radius: 10px;
+  list-style-type: none;
+}
+
+.form-container li {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.products {
+  padding: 10px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.img-products {
+  max-width: 300px;
+  max-height: 250px;
+}
+
+.product-detail {
+  min-height: 100vh;
+}
+
+.product-detail img {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.img-item {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.cart-info {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.cart-info > div {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.cart-info h4 {
+  font-weight: bold;
+}
+
+.cart-info > div > input {
+  padding: 5px;
+  margin: 5px 5px 5px 0px;
+}
+
+.cart-info > div > input:focus {
+  outline: null;
+}
+
+.cart-price {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  color: red;
+}
+
+.modal-90w {
+  width: 90vw; /* Occupy the 90% of the screen width */
+  max-width: 90vw !important;
+}
+
+@media (max-width: 768px) {
+  .landing-text h1 {
+    font-size: 300%;
+  }
+
+  .img-product {
+    max-width: 300px;
+    max-height: 100px;
+  }
+
+  .img-products {
+    max-width: 150px;
+    max-width: 150px;
+  }
+
+  .product-detail img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
